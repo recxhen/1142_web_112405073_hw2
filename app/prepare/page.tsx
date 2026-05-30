@@ -9,7 +9,7 @@ export default function prepare(){
     <>
       <div className="flex flex-col justify-center item-center gap-4 ">
         準備
-        <Link className-="text-white bg-black px-3 py-2" href="/result">揭曉答案</Link>  
+        <Link className="text-white bg-black px-3 py-2" href="/result">揭曉答案</Link>  
       </div>
 
     </>

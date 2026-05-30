@@ -1,10 +1,15 @@
 "use client"
 import Link from "next/link";
-import {useEffect, useState} from "react"
+import {useEffect, useState} from "react";
+import ActionButton from "@/component/ActionButton";
+import Emoticons from "@/component/Emoticons";
+
 
 export default function Home(){
 
-  
+
+
+
   // 階段名稱   路由規劃
   // 歡迎畫面  /
   // 答題      /
@@ -18,14 +23,18 @@ export default function Home(){
     <>
       <div className="flex flex-col justify-center item-center gap-4 ">
         歡迎！
-        <Link className-="text-white bg-black px-3 py-2" href="/question">START</Link>  
+        {/* <Emoticons/> */}
+        <Emoticons>
+         <Link className="text-white bg-black px-3 py-2" href="/question">START</Link>  
+
+
+        </Emoticons>
+
+
+        <Link className="text-white bg-black px-3 py-2" href="/question">START</Link>  
+        <ActionButton/>
       </div>
 
     </>
-  ) 
-
-
-
-
-
+  );
 }
