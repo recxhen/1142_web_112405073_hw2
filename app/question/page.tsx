@@ -2,30 +2,30 @@
 import Link from "next/link";
 import { useEffect, useState } from "react"
 import { useRouter } from "next/navigation"
-import {usePsyStore} from "../../store/store"
+import { usePsyStore } from "../../store/store"
 
 
 export default function question() {
   const router = useRouter();
   const [questionIndex, setQuestionIndex] = useState(0);
 
-  const psyData = usePsyStore( (state)=> state.psyData);
-  const setPsyScore = usePsyStore( (state) => state.setScore );
+  const psyData = usePsyStore((state) => state.psyData);
+  const setPsyScore = usePsyStore((state) => state.setScore);
 
   console.log(psyData);
   console.log(psyData.quizData);
 
-  useEffect(() =>{
-    console.log("目前分數："+ psyData.score);
-  },[psyData.score]);
+  useEffect(() => {
+    console.log("目前分數：" + psyData.score);
+  }, [psyData.score]);
 
 
-  function nextQuestion(optionIndex: any){
+  function nextQuestion(optionIndex: any) {
     console.log("使用者選擇：" + optionIndex);
 
     setPsyScore(psyData.score + psyData.quizData[questionIndex].options[optionIndex].value);
     console.log(psyData.score);
-    
+
     if (questionIndex != psyData.quizData.length - 1) {
       console.log("下一題～");
       setQuestionIndex(questionIndex + 1);
@@ -91,37 +91,29 @@ export default function question() {
 
 
 
-  
-    return (
-      <>
 
-        <div className="flex flex-col justify-center items-center gap-4 ">
-          答題
-          <div>
-            <div>{ "Q"+(questionIndex+1)+"." + psyData.quizData[questionIndex].title}</div>
-            <div onClick={() => nextQuestion(0)}>{psyData.quizData[questionIndex].options[0].text}</div>
-            <div onClick={() => nextQuestion(1)}>{psyData.quizData[questionIndex].options[1].text}</div>
-            <div onClick={() => nextQuestion(2)}>{psyData.quizData[questionIndex].options[2].text}</div>
-          </div>
+  return (
+    <>
 
+      <div className="flex flex-col justify-center items-center gap-4 ">
+        答題
+        <div>
+          <div>{"Q" + (questionIndex + 1) + "." + psyData.quizData[questionIndex].title}</div>
+          {/* <div onClick={() => nextQuestion(0)}>{psyData.quizData[questionIndex].options[0].text}</div>
+          <div onClick={() => nextQuestion(1)}>{psyData.quizData[questionIndex].options[1].text}</div>
+          <div onClick={() => nextQuestion(2)}>{psyData.quizData[questionIndex].options[2].text}</div> */}
+          {
+            psyData.quizData[questionIndex].options.map(
+              (option: any, index: number) => {
+                return <div onClick={() => nextQuestion(index)}>{option.text}</div>
+              }
+            )
+          }
         </div>
 
-        {/* 
-        <div>
-          <div>{questionData[1].title}</div>
-          <div>{questionData[1].options[0].text}</div>
-          <div>{questionData[1].options[1].text}</div>
-          <div>{questionData[1].options[2].text}</div>
-        </div>
-        <div>
-          <div>{questionData[2].title}</div>
-          <div>{questionData[2].options[0].text}</div>
-          <div>{questionData[2].options[1].text}</div>
-          <div>{questionData[2].options[2].text}</div>
-        </div> */}
+      </div>
 
+    </>
+  )
 
-      </>
-    )
-  
 }

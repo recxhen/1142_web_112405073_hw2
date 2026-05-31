@@ -50,7 +50,41 @@ const questionData = [
         {
           text: "裝死，假裝自己是牛角麵包",
           value: 3 
-        }
+        },
+      ]
+    },
+    {
+      title: "111111你會？",
+      options:[
+        {
+          text: "立刻乾癟五公分，氣到扁掉",
+          value: 1
+        },
+        {
+          text: "更用力散發麵包香，讓他後悔！",
+          value: 2
+        },
+        {
+          text: "裝死，假裝自己是牛角麵包",
+          value: 3 
+        },
+      ]
+    },
+    {
+      title: "nmsk會？",
+      options:[
+        {
+          text: "立刻乾癟五公分，氣到扁掉",
+          value: 1
+        },
+        {
+          text: "更用力散發麵包香，讓他後悔！",
+          value: 2
+        },
+        {
+          text: "裝死，假裝自己是牛角麵包",
+          value: 3 
+        },
       ]
     }
 ];

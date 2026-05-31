@@ -23,16 +23,17 @@ export default function Home(){
     <>
       <div className="flex flex-col justify-center item-center gap-4 ">
         歡迎！
+        
+        想知道你是哪種植物嗎？花三分鐘揭曉最適合你的植物！
         {/* <Emoticons/> */}
-        <Emoticons>
-         <Link className="text-white bg-black px-3 py-2" href="/question">START</Link>  
+        {/* <Emoticons faceIndex={0}>
+         <Link className="text-white bg-black px-3 py-2" href="/question">11111</Link>  
 
-
-        </Emoticons>
+        </Emoticons> */}
 
 
         <Link className="text-white bg-black px-3 py-2" href="/question">START</Link>  
-        <ActionButton/>
+        {/* <ActionButton/> */}
       </div>
 
     </>
