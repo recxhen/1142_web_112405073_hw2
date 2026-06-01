@@ -7,7 +7,7 @@ import Emoticons from "@/component/Emoticons";
 export default function Home() {
   return (
     // 1. 這裡使用 max-w-full 確保最外層不超過外框，並移除 w-screen
-    <div className="flex flex-col justify-center items-center min-h-150 bg-[#4d8563] p-4 font-mono box-border">
+    <div className="flex flex-col justify-center items-center min-h-150 bg-[#61673c] p-4 font-mono box-border">
       
       {/* 2. 主容器：寬度設為 92%（確保手機兩側一定有安全留白），最大鎖在 400px */}
       <div className="flex flex-col justify-center items-center gap-5 w-[92%] max-w-[400px] text-center text-[#eadeca] box-border">
@@ -15,18 +15,18 @@ export default function Home() {
         {/* 🏛️ 質感標題區塊（無 Emoji，改用像素對稱裝飾線） */}
         <div className="w-full flex items-center justify-center gap-3 py-2 select-none box-border">
           {/* 左裝飾線 */}
-          <div className="flex flex-col items-end gap-[3px] opacity-70 flex-shrink-0">
+          <div className="flex flex-col items-end gap-[3px] opacity-70 shrink-0">
             <div className="w-4 h-[3px] bg-[#eadeca]"></div>
             <div className="w-2 h-[3px] bg-[#ad7224]"></div>
           </div>
           
           {/* 主標題文字 */}
           <h1 className="text-xl font-black tracking-widest text-[#eadeca] drop-shadow-[2px_2px_0px_#1d130b] whitespace-nowrap">
-            像素叢林考察誌
+            叢林考察誌
           </h1>
           
           {/* 右裝飾線 */}
-          <div className="flex flex-col items-start gap-[3px] opacity-70 flex-shrink-0">
+          <div className="flex flex-col items-start gap-[3px] opacity-70 shrink-0">
             <div className="w-4 h-[3px] bg-[#eadeca]"></div>
             <div className="w-2 h-[3px] bg-[#ad7224]"></div>
           </div>

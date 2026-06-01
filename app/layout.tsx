@@ -38,9 +38,14 @@ export default function RootLayout({
           {/* 容器內裝飾：左上角藤蔓（放大版） */}
           {/* 💡 調整重點：將 z-30 改為 z-0，讓圖層退到主要內容區 (z-10) 的後方 */}
           <img
-            src="/vine.png"
+            src="/vine1.png"
             alt="Vine"
             className="absolute -top-2 -left-2 w-32 h-auto z-0 pointer-events-none pixel-img"
+          />
+          <img
+            src="/vine2.png"
+            alt="Vine"
+            className="absolute -top-2 -right-2 w-40 h-auto z-0 pointer-events-none pixel-img"
           />
 
           {/* 主要內容區 */}
@@ -70,6 +75,7 @@ export default function RootLayout({
               alt="Fern"
               className="absolute -top-15 right-6 w-[162.5px] h-auto z-30 pointer-events-none pixel-img"
             />
+            
 
           </div> {/* <-- 修正：確保底部草地容器正確閉合 */}
 
