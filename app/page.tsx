@@ -30,9 +30,9 @@ export default function Home() {
           </div>
 
           {/* 主標題文字 */}
-          <h1 className="text-xl font-black tracking-widest text-[#eadeca] drop-shadow-[2px_2px_0px_#1d130b] whitespace-nowrap">
-            叢林考察誌
-          </h1>
+          <h1 className="text-2xl font-black tracking-widest text-transparent bg-clip-text bg-gradient-to-b from-[#fff1d0] via-[#e9c983] to-[#ad7224] filter drop-shadow-[2px_2px_0px_#1d130b] drop-shadow-[4px_4px_0px_rgba(0,0,0,0.4)] whitespace-nowrap">
+  叢林考察誌
+</h1>
 
           {/* 右裝飾線 */}
           <div className="flex flex-col items-start gap-[3px] opacity-70 shrink-0">

@@ -7,7 +7,7 @@ export default function result() {
   const [id, setId]= useState({name: "", age: 0, city: ""});
 
   useEffect(()=>{
-    fetch("http://localhost:3002/person?id=0")
+    fetch("http://localhost:3002/person?id=0 ")
       .then(response => response.json())
       .then(data => {
         console.log(data)
